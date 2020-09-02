@@ -17,19 +17,59 @@ async function stageTest() {
     const page = await browser.newPage();
     await page.goto(pagePath);
 
-    page.on('console', msg => console.log(msg.text()));
+    page.on('console', msg => {
+        console.log(msg.text());
+    });
 
     await sleep(1000);
 
+    await page.evaluate(() => {
+        this.realLog = console.log;
+        this.userPrinted = [];
+        console.log = x => {
+            this.userPrinted.push(x);
+            this.realLog(x);
+        }
+    });
+
     let result = await hs.testPage(page,
-        // Test #1 - check div element with class container + 7 elements inside
+        // Test #1 - check all keys are pressed
+        () => {
+            let keys = ['a', 's', 'd', 'f', 'g', 'h', 'j'];
+
+            for (let key of keys) {
+                this.realLog("Before: " + JSON.stringify(this.userPrinted));
+                hs.press(key);
+                this.realLog("After: " + JSON.stringify(this.userPrinted));
+
+                if (this.userPrinted.length !== 1) {
+                    return hs.wrong(
+                        `When the user presses a key, you should log a single message, ` +
+                        `found ${this.userPrinted.length} messages`
+                    )
+                }
+
+                let elem = this.userPrinted.pop();
+                if (!elem.toLowerCase().includes(`'${key}'`)) {
+                    return hs.wrong(
+                        `When the user pressed a key "${key}", ` +
+                        `The output message must include '${key}'\n` +
+                        `You printed:\n`+
+                        `"${elem}"`
+                    );
+                }
+            }
+
+            return hs.correct()
+        },
+        // Test #2 - check div element with class container + 7 elements inside
         () => {
             let containerElements = document.getElementsByClassName('container');
             if (containerElements.length === 0) {
                 return hs.wrong(`Cannot find element with class 'container'`);
             } else if (containerElements.length > 1) {
                 return hs.wrong(`Found ${containerElements.length} elements with class 'container'` +
-                `, the page should contain just a single such element.`);
+                    `, the page should contain just a single such element.`);
             }
 
             let container = containerElements[0];
@@ -51,7 +91,7 @@ async function stageTest() {
                 hs.wrong(`Div with class 'container' should contain 7 elements, found: ${len}`)
         },
 
-        // Test #2 - check if all 7 elements are <kbd> elements
+        // Test #3 - check if all 7 elements are <kbd> elements
         () => {
             let i = 0;
             for (let elem of this.innerDivElements) {
@@ -64,7 +104,7 @@ async function stageTest() {
             return hs.correct();
         },
 
-        // Test #3 - check if all 7 elements contain a single letter
+        // Test #4 - check if all 7 elements contain a single letter
         () => {
             let i = 0;
             for (let elem of this.innerDivElements) {
@@ -80,7 +120,7 @@ async function stageTest() {
             return hs.correct();
         },
 
-        // Test 4 - Test if all elements have the same top y-coordinate
+        // Test 5 - Test if all 7 elements have the same top y-coordinate
         // (located on a single horizontal line)
         () => {
             let referenceTop = this.innerDivElements[0].getBoundingClientRect().top;
@@ -97,7 +137,7 @@ async function stageTest() {
             return hs.correct();
         },
 
-        // Test 5 - Test if all elements are located in the middle
+        // Test 6 - Test if all 7 elements are located in the middle
         () => {
             let width = window.innerWidth;
             let height = window.innerHeight;
@@ -132,7 +172,7 @@ async function stageTest() {
             return hs.correct();
         },
 
-        // Test 6 - Test if all elements have border
+        // Test 7 - Test if all elements have border
         () => {
             let i = 0;
             for (let elem of this.innerDivElements) {
@@ -146,7 +186,7 @@ async function stageTest() {
             return hs.correct()
         },
 
-        // Test 7 - Test if all element's background color is white and
+        // Test 8 - Test if all element's background color is white and
         // body's background in not white
         () => {
             function getRealColor(elem) {
@@ -189,12 +229,13 @@ async function stageTest() {
             return hs.correct()
         },
 
-        // Test 8 - Test width, height
+        // Test 9 - Test width, height
         () => {
             let i = 0;
             for (let elem of this.innerDivElements) {
                 i++;
                 let currDisplay = window.getComputedStyle(elem).display;
+
                 let currWidth = window.getComputedStyle(elem).width;
                 if (currWidth === 'auto') {
                     return hs.wrong(`Looks like piano's element #${i} ` +
@@ -210,7 +251,7 @@ async function stageTest() {
             return hs.correct()
         },
 
-        // Test 9 - Checking key distances between keys
+        // Test 10 - Checking key distances between keys
         () => {
             let buttons = document.querySelectorAll('kbd');
 
