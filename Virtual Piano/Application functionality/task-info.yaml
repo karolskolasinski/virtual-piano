@@ -342,6 +342,13 @@ files:
         margin: 10% auto;
     }
   learner_created: true
+- name: src/js/piano.js
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/101/stages/558/implement
-status: Unchecked
-record: -1
+status: Solved
+feedback:
+  message: Congratulations! Continue on <a href="https://hyperskill.org/projects/101/stages/558/implement">JetBrains
+    Academy</a>
+  time: Thu, 03 Sep 2020 10:54:43 UTC
+record: 3

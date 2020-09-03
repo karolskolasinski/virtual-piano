@@ -1,0 +1,18 @@
+type: code
+files:
+- name: main.js
+  visible: true
+  text: |-
+    let song(
+      name: "Twinkle, Twinkle, Little Star",
+      author: Jane Taylor,
+      date: 1806,
+    );
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/8592
+status: Solved
+feedback:
+  message: <html>Correct solution<br/><br/>Continue on <a href="https://hyperskill.org/learn/step/8592">JetBrains
+    Academy</a></html>
+  time: Wed, 02 Sep 2020 17:10:59 UTC
+record: -1

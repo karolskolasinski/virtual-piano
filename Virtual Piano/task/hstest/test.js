@@ -24,44 +24,42 @@ async function stageTest() {
     await sleep(1000);
 
     await page.evaluate(() => {
-        this.realLog = console.log;
-        this.userPrinted = [];
-        console.log = x => {
-            this.userPrinted.push(x);
-            this.realLog(x);
+        this.RealAudio = this.Audio;
+        this.audioCreated = [];
+        this.Audio = function(...args) {
+            audioCreated.push(args[0]);
+            return new RealAudio(...args);
+        };
+
+        this.oldCreate = document.createElement;
+        document.createElement = function(...args) {
+            if (args[0].toLowerCase() === 'audio') {
+                audioCreated.push(args[0]);
+            }
+            return oldCreate(...args);
         }
     });
 
     let result = await hs.testPage(page,
-        // Test #1 - check all keys are pressed
+        // Test #1 - audio object creation check
         () => {
             let keys = ['a', 's', 'd', 'f', 'g', 'h', 'j'];
-
-            for (let key of keys) {
-                this.realLog("Before: " + JSON.stringify(this.userPrinted));
+            keys.forEach(function (key) {
                 hs.press(key);
-                this.realLog("After: " + JSON.stringify(this.userPrinted));
+            });
 
-                if (this.userPrinted.length !== 1) {
-                    return hs.wrong(
-                        `When the user presses a key, you should log a single message, ` +
-                        `found ${this.userPrinted.length} messages`
-                    )
-                }
+            let audioElements = this.audioCreated.length;
 
-                let elem = this.userPrinted.pop();
-                if (!elem.toLowerCase().includes(`'${key}'`)) {
-                    return hs.wrong(
-                        `When the user pressed a key "${key}", ` +
-                        `The output message must include '${key}'\n` +
-                        `You printed:\n`+
-                        `"${elem}"`
-                    );
-                }
+            if (audioElements === 0) {
+                return hs.wrong(`Сannot find the audio objects. Note that audio objects must be created exactly when keys are pressed.`);
+            } else if (audioElements < keys.length) {
+                return hs.wrong(`There are not enough audio objects, ${audioElements} of 7 objects were found`);
+            } else if (audioElements > keys.length) {
+                return hs.wrong(`There are too many audio objects, found ${audioElements} instead of 12 objects`);
             }
-
-            return hs.correct()
+            return hs.correct();
         },
+
         // Test #2 - check div element with class container + 7 elements inside
         () => {
             let containerElements = document.getElementsByClassName('container');
@@ -251,7 +249,7 @@ async function stageTest() {
             return hs.correct()
         },
 
-        // Test 10 - Checking key distances between keys
+        // Test 9 - Checking key distances between keys
         () => {
             let buttons = document.querySelectorAll('kbd');
 
