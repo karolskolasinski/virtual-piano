@@ -502,6 +502,25 @@ files:
         }
     })
   learner_created: true
+- name: src/audio/W.mp3
+  visible: true
+  learner_created: true
+- name: src/audio/T.mp3
+  visible: true
+  learner_created: true
+- name: src/audio/Y.mp3
+  visible: true
+  learner_created: true
+- name: src/audio/U.mp3
+  visible: true
+  learner_created: true
+- name: src/audio/E.mp3
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/101/stages/560/implement
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations! Continue on <a href="https://hyperskill.org/projects/101/stages/560/implement">JetBrains
+    Academy</a>
+  time: Thu, 03 Sep 2020 15:22:45 UTC
 record: -1
