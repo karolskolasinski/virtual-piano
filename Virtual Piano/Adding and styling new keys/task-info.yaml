@@ -465,6 +465,43 @@ files:
         }
     );
   learner_created: false
+- name: src/css/style.css
+  visible: true
+  text: |
+    body {
+        background-color: slategrey;
+    }
+
+    kbd {
+        background-color: white;
+        display: inline-block;
+        text-align: center;
+        height: 16em;
+        width: 4em;
+        z-index: 1;
+        border-left: 1px solid #bbb;
+        border-bottom: 1px solid #bbb;
+        border-radius: 0 0 5px 5px;
+        box-shadow: -1px 0 0 rgba(255, 255, 255, 0.8) inset, 0 0 5px #ccc inset, 0 0 3px rgba(0, 0, 0, 0.2);
+    }
+
+
+    .container {
+        width: max-content;
+        margin: 10% auto;
+    }
+  learner_created: true
+- name: src/js/piano.js
+  visible: true
+  text: |
+    const pianoKeys = new Set('ASDFGHJ');
+
+    document.addEventListener("keypress", function (e) {
+        if (pianoKeys.has(e.key.toUpperCase())) {
+            new Audio("audio/" + e.key.toUpperCase() + ".mp3").play();
+        }
+    })
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/101/stages/560/implement
 status: Unchecked
 record: -1

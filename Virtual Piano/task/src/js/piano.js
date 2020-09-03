@@ -1,3 +1,7 @@
-document.addEventListener('keydown', event => {
-    console.log('The \'' + event.key + '\' key is pressed.')
+const pianoKeys = new Set('ASDFGHJ');
+
+document.addEventListener("keypress", function (e) {
+    if (pianoKeys.has(e.key.toUpperCase())) {
+        new Audio("audio/" + e.key.toUpperCase() + ".mp3").play();
+    }
 })
