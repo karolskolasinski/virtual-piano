@@ -1,0 +1,16 @@
+type: code
+files:
+- name: main.js
+  visible: true
+  text: |-
+    let userName = "Brad";
+    let place = "first";
+    // write your code below
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/8737
+status: Solved
+feedback:
+  message: <html>Correct solution<br/><br/>Continue on <a href="https://hyperskill.org/learn/step/8737">JetBrains
+    Academy</a></html>
+  time: Fri, 04 Sep 2020 15:12:53 UTC
+record: -1

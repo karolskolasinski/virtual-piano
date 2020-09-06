@@ -1,0 +1,16 @@
+type: code
+files:
+- name: main.js
+  visible: true
+  text: // write your code here
+  learner_created: false
+- name: adsad.txt
+  visible: true
+  learner_created: true
+feedback_link: https://hyperskill.org/learn/step/8736
+status: Solved
+feedback:
+  message: <html>Correct solution<br/><br/>Continue on <a href="https://hyperskill.org/learn/step/8736">JetBrains
+    Academy</a></html>
+  time: Fri, 04 Sep 2020 15:14:12 UTC
+record: -1
