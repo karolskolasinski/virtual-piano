@@ -1,0 +1,14 @@
+type: code
+files:
+- name: main.js
+  visible: true
+  text: "function Bird(name, color, size) {\n  this.name = name;\n  this.color = color;\n\
+    \  this.size = size;\n}    \n\nconst amazonParrot;\nconst canary;"
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/9977
+status: Solved
+feedback:
+  message: <html>Correct solution<br/><br/>Continue on <a href="https://hyperskill.org/learn/step/9977">JetBrains
+    Academy</a></html>
+  time: Sun, 06 Sep 2020 16:43:39 UTC
+record: -1

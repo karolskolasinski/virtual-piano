@@ -1,0 +1,21 @@
+type: code
+files:
+- name: main.js
+  visible: true
+  text: |-
+    const isGoodWeather = true;
+    const promise = new Promise(function(resolve, reject){
+    if (isGoodWeather){
+      resolve("You should go to the beach!");
+    }
+    });
+
+    const successText;
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/9994
+status: Solved
+feedback:
+  message: <html>Correct solution<br/><br/>Continue on <a href="https://hyperskill.org/learn/step/9994">JetBrains
+    Academy</a></html>
+  time: Sun, 06 Sep 2020 18:48:32 UTC
+record: -1

@@ -1,0 +1,25 @@
+type: code
+custom_name: Is A bigger than B?
+files:
+- name: main.js
+  visible: true
+  text: |-
+    function toShow(){
+        if (a > b){
+        console.log(5)
+    }
+    if (b < c ){
+         console.log(10)
+    }
+    if (a < c ){
+       console.log(15)
+      }
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/9923
+status: Solved
+feedback:
+  message: <html>Correct solution<br/><br/>Continue on <a href="https://hyperskill.org/learn/step/9923">JetBrains
+    Academy</a></html>
+  time: Sun, 06 Sep 2020 13:11:37 UTC
+record: -1

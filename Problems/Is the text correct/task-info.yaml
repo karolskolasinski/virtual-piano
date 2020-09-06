@@ -1,0 +1,16 @@
+type: code
+custom_name: Is the text correct?
+files:
+- name: main.js
+  visible: true
+  text: |-
+    const isCorrectText = true;
+    // write your function here
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/9986
+status: Solved
+feedback:
+  message: <html>Correct solution<br/><br/>Continue on <a href="https://hyperskill.org/learn/step/9986">JetBrains
+    Academy</a></html>
+  time: Sun, 06 Sep 2020 18:01:22 UTC
+record: -1
