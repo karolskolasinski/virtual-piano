@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@900&family=Lato:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@900&family=Lato:wght@300;400;900&display=swap');
 
 * {
     box-sizing: border-box;
@@ -89,11 +89,12 @@ main {
     padding: 0 5%;
 }
 
-footer p {
+footer {
     display: flex;
     justify-content: center;
-    padding-bottom: 5%;
+    padding-bottom: 8px;
     color: white;
+    font-size: large;
     font-weight: 400;
 }
 
@@ -101,6 +102,41 @@ p {
     font-family: 'Lato', sans-serif;
     font-weight: 300;
 }
+
+a {
+    font-size: medium;
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.main-img {
+    padding: 3% 0;
+}
+
+.tec img {
+    height: 40px;
+    opacity: 0.7;
+}
+
+.tec img:hover {
+    opacity: 1;
+}
+
+.name {
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.surname {
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
 
 ::selection {
     background-color: #f1c40f;
