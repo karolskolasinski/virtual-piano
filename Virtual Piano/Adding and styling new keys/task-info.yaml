@@ -517,6 +517,9 @@ files:
 - name: src/audio/E.mp3
   visible: true
   learner_created: true
+- name: src/ssdwe.html
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/101/stages/560/implement
 status: Solved
 feedback:
