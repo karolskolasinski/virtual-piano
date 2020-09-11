@@ -6,62 +6,111 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Virtual Piano 🎹 - Karol Skolasiński</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/toggle.css">
 </head>
 <body>
 
 <header>
     <div class="piano">
         <div class="key">
-            <div class="white">A</div>
-            <div class="black"></div>
+            <div class="white">
+                <div class="white-letter">Tab</div>
+            </div>
+            <div class="black">
+                <div class="black-letter">1</div>
+            </div>
         </div>
         <div class="key">
-            <div class="white"></div>
-            <div class="black"></div>
+            <div class="white">
+                <div class="white-letter">Q</div>
+            </div>
+            <div class="black">
+                <div class="black-letter">2</div>
+            </div>
         </div>
         <div class="key">
-            <div class="white"></div>
+            <div class="white">
+                <div class="white-letter">W</div>
+            </div>
         </div>
         <div class="key">
-            <div class="white"></div>
-            <div class="black"></div>
+            <div class="white">
+                <div class="white-letter">E</div>
+            </div>
+            <div class="black">
+                <div class="black-letter">4</div>
+            </div>
         </div>
         <div class="key">
-            <div class="white"></div>
-            <div class="black"></div>
+            <div class="white">
+                <div class="white-letter">R</div>
+            </div>
+            <div class="black">
+                <div class="black-letter">5</div>
+            </div>
         </div>
         <div class="key">
-            <div class="white"></div>
-            <div class="black"></div>
+            <div class="white">
+                <div class="white-letter">T</div>
+            </div>
+            <div class="black">
+                <div class="black-letter">6</div>
+            </div>
         </div>
         <div class="key">
-            <div class="white"></div>
+            <div class="white">
+                <div class="white-letter">Y</div>
+            </div>
         </div>
         <div class="key">
-            <div class="white"></div>
-            <div class="black"></div>
+            <div class="white">
+                <div class="white-letter">U</div>
+            </div>
+            <div class="black">
+                <div class="black-letter">8</div>
+            </div>
         </div>
         <div class="key">
-            <div class="white"></div>
-            <div class="black"></div>
+            <div class="white">
+                <div class="white-letter">I</div>
+            </div>
+            <div class="black">
+                <div class="black-letter">9</div>
+            </div>
         </div>
         <div class="key">
-            <div class="white"></div>
+            <div class="white">
+                <div class="white-letter">O</div>
+            </div>
         </div>
         <div class="key">
-            <div class="white"></div>
-            <div class="black"></div>
+            <div class="white">
+                <div class="white-letter">P</div>
+            </div>
+            <div class="black">
+                <div class="black-letter">-</div>
+            </div>
         </div>
         <div class="key">
-            <div class="white"></div>
-            <div class="black"></div>
+            <div class="white">
+                <div class="white-letter">[</div>
+            </div>
+            <div class="black">
+                <div class="black-letter">=</div>
+            </div>
         </div>
         <div class="key">
-            <div class="white"></div>
-            <div class="black"></div>
+            <div class="white">
+                <div class="white-letter">]</div>
+            </div>
+            <div class="black">
+                <div class="black-letter">⟵</div>
+            </div>
         </div>
         <div class="key">
-            <div class="white"></div>
+            <div class="white">
+                <div class="white-letter">\</div>
+            </div>
         </div>
     </div>
 </header>
@@ -70,10 +119,30 @@
     <div class="main-title">
         <h1>Virtual Piano 🎹</h1>
     </div>
+
+    <div class="switches">
+        <div class="main-key-visibility">
+            <p class="main-toggle-text">Keys visibility</p>
+            <label>
+                <input class="toggle" type="checkbox" name="key-visibility" value="turned" checked>
+            </label>
+        </div>
+
+        <div class="main-light">
+            <p class="main-toggle-text">Light</p>
+            <label>
+                <input class="toggle" type="checkbox" name="light" value="turned" checked>
+            </label>
+        </div>
+
+
+    </div>
+
     <div class="main-content">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum et maiores neque porro sunt. A ad dolorum
             explicabo id iste nobis rem, reprehenderit ullam. Distinctio harum labore laboriosam veniam vitae.</p>
     </div>
+
     <div class="main-content tec">
         <div class="main-img">
             <img src="https://img.icons8.com/color/96/000000/html-5.png" alt="HTML Powered" title="HTML Powered">
@@ -93,5 +162,6 @@
 </footer>
 
 <script src="js/piano.js"></script>
+<script src="js/letter-hide.js"></script>
 </body>
 </html>

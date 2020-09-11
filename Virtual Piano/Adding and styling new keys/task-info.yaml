@@ -517,6 +517,12 @@ files:
 - name: src/audio/E.mp3
   visible: true
   learner_created: true
+- name: src/js/letter-hide.js
+  visible: true
+  learner_created: true
+- name: src/css/toggle.css
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/101/stages/560/implement
 status: Solved
 feedback:
