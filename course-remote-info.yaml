@@ -56,12 +56,16 @@ topics:
     theory_id: 7730
   - title: Colors
     theory_id: 7973
+  - title: Border
+    theory_id: 8355
+  - title: Absolute units
+    theory_id: 10605
+  - title: Relative units
+    theory_id: 10671
   - title: Width and height
     theory_id: 8325
   - title: Margin and padding
     theory_id: 8346
-  - title: Border
-    theory_id: 8355
   2:
   - title: Introduction to JavaScript
     theory_id: 8016
