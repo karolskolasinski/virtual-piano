@@ -1,18 +1,10 @@
-// const pianoKeys = new Set('ASDFGHJWERTYU');
-//
-// document.addEventListener("keydown", function (e) {
-//     if (pianoKeys.has(e.key.toUpperCase())) {
-//         new Audio("audio/" + e.key.toUpperCase() + ".mp3").play();
-//     }
-// })
-
 document.onkeydown = t => {
     if (t.which === 9) {
         return false;
     }
 }
 
-const keys = {
+const keysAudio = {
     //normal keys
     "Tab": "audio/C1.mp3",
     "KeyQ": "audio/D1.mp3",
@@ -41,8 +33,16 @@ const keys = {
     'Backspace': "audio/A2-sharp.mp3",
 }
 
+
 document.addEventListener("keydown", (e) => {
-    if (e.code in keys) {
-        new Audio(keys[e.code]).play()
+    if (e.code in keysAudio) {
+        new Audio(keysAudio[e.code]).play();
+        document.getElementById(e.code).classList.add('active');
+    }
+});
+
+document.addEventListener("keyup", (e) => {
+    if (e.code in keysAudio) {
+        document.getElementById(e.code).classList.remove('active');
     }
 });
