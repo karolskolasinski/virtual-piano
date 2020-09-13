@@ -111,12 +111,17 @@ main {
     justify-content: center;
 }
 
-.main-key-visibility {
-    padding-right: 50px;
+.switches-text {
+    font-size: larger;
 }
 
-.main-toggle-text {
+.switches-key-visibility {
+    padding-right: 50px;
+    text-align: center;
+}
 
+.switches-light {
+    text-align: center;
 }
 
 .main-content {
