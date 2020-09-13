@@ -1,10 +1,10 @@
 document.onkeydown = t => {
-    if (t.which === 9) {
+    if (t.code === 'Tab') {
         return false;
     }
 }
 
-const keysAudio = {
+const keys = {
     //normal keys
     "Tab": "audio/C1.mp3",
     "KeyQ": "audio/D1.mp3",
@@ -20,6 +20,7 @@ const keysAudio = {
     'BracketLeft': "audio/G2.mp3",
     'BracketRight': "audio/A2.mp3",
     'Backslash': "audio/B2.mp3",
+
     // sharp keys
     'Digit1': "audio/C1-sharp.mp3",
     'Digit2': "audio/D1-sharp.mp3",
@@ -35,14 +36,14 @@ const keysAudio = {
 
 
 document.addEventListener("keydown", (e) => {
-    if (e.code in keysAudio) {
-        new Audio(keysAudio[e.code]).play();
+    if (e.code in keys) {
+        new Audio(keys[e.code]).play();
         document.getElementById(e.code).classList.add('active');
     }
 });
 
 document.addEventListener("keyup", (e) => {
-    if (e.code in keysAudio) {
+    if (e.code in keys) {
         document.getElementById(e.code).classList.remove('active');
     }
 });
