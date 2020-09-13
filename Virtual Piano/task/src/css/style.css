@@ -94,8 +94,13 @@ body {
     display: none;
 }
 
-main {
+.main-white {
     background: white;
+}
+
+.main-dark {
+    background: #424242;
+    color: #eeeeee;
 }
 
 .main-title {
@@ -104,6 +109,10 @@ main {
     font-family: 'Kanit', sans-serif;
     font-size: large;
     color: #222222;
+}
+
+.main-title-white {
+    color: #eeeeee;
 }
 
 .switches {
@@ -135,9 +144,13 @@ footer {
     display: flex;
     justify-content: center;
     padding-bottom: 8px;
-    color: white;
+    color: #eeeeee;
     font-size: large;
     font-weight: 400;
+}
+
+h1 {
+    margin: 0.3em 0;
 }
 
 p {

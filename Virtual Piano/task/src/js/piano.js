@@ -5,7 +5,7 @@ document.onkeydown = t => {
 };
 
 const keys = {
-    //normal keys
+    // normal keys
     'Tab': 'audio/C1.mp3',
     'KeyQ': 'audio/D1.mp3',
     'KeyW': 'audio/E1.mp3',
@@ -38,20 +38,20 @@ const keys = {
 document.addEventListener('keydown', e => {
     if (e.code in keys) {
         new Audio(keys[e.code]).play();
-        document.getElementById(e.code).classList.add('active');
+        document.querySelector(`#${e.code}`).classList.add('active');
     }
 });
 
 
 document.addEventListener('keyup', e => {
     if (e.code in keys) {
-        document.getElementById(e.code).classList.remove('active');
+        document.querySelector(`#${e.code}`).classList.remove('active');
     }
 });
 
 
 for (let key in keys) {
-    document.getElementById(key).addEventListener("click", () => {
+    document.querySelector(`#${key}`).addEventListener("click", () => {
         new Audio(keys[key]).play();
     });
 }

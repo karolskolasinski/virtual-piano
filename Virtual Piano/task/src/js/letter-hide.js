@@ -1,8 +1,8 @@
-const checkbox = document.querySelector("input[name=key-visibility]");
+const keyVisibility = document.querySelector("input[name=key-visibility]");
 
 
-checkbox.addEventListener('click', () => {
-    if (checkbox.checked) {
+keyVisibility.addEventListener('click', () => {
+    if (keyVisibility.checked) {
         switchLetters('.white-letter', false);
         switchLetters('.black-letter', false);
     } else {
@@ -10,6 +10,7 @@ checkbox.addEventListener('click', () => {
         switchLetters('.black-letter', true);
     }
 });
+
 
 const switchLetters = (lettersType, hide) => {
     const letters = document.querySelectorAll(lettersType);
