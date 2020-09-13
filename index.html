@@ -13,134 +13,132 @@
 <header>
     <div class="piano">
         <div class="key">
-            <div class="white">
+            <div class="white" id="Tab">
                 <div class="white-letter">Tab</div>
             </div>
-            <div class="black">
+            <div class="black" id="Digit1">
                 <div class="black-letter">1</div>
             </div>
         </div>
         <div class="key">
-            <div class="white">
+            <div class="white" id="KeyQ">
                 <div class="white-letter">Q</div>
             </div>
-            <div class="black">
+            <div class="black" id="Digit2">
                 <div class="black-letter">2</div>
             </div>
         </div>
         <div class="key">
-            <div class="white">
+            <div class="white" id="KeyW">
                 <div class="white-letter">W</div>
             </div>
         </div>
         <div class="key">
-            <div class="white">
+            <div class="white" id="KeyE">
                 <div class="white-letter">E</div>
             </div>
-            <div class="black">
+            <div class="black" id="Digit4">
                 <div class="black-letter">4</div>
             </div>
         </div>
         <div class="key">
-            <div class="white">
+            <div class="white" id="KeyR">
                 <div class="white-letter">R</div>
             </div>
-            <div class="black">
+            <div class="black" id="Digit5">
                 <div class="black-letter">5</div>
             </div>
         </div>
         <div class="key">
-            <div class="white">
+            <div class="white" id="KeyT">
                 <div class="white-letter">T</div>
             </div>
-            <div class="black">
+            <div class="black" id="Digit6">
                 <div class="black-letter">6</div>
             </div>
         </div>
         <div class="key">
-            <div class="white">
+            <div class="white" id="KeyY">
                 <div class="white-letter">Y</div>
             </div>
         </div>
         <div class="key">
-            <div class="white">
+            <div class="white" id="KeyU">
                 <div class="white-letter">U</div>
             </div>
-            <div class="black">
+            <div class="black" id="Digit8">
                 <div class="black-letter">8</div>
             </div>
         </div>
         <div class="key">
-            <div class="white">
+            <div class="white" id="KeyI">
                 <div class="white-letter">I</div>
             </div>
-            <div class="black">
+            <div class="black" id="Digit9">
                 <div class="black-letter">9</div>
             </div>
         </div>
         <div class="key">
-            <div class="white">
+            <div class="white" id="KeyO">
                 <div class="white-letter">O</div>
             </div>
         </div>
         <div class="key">
-            <div class="white">
+            <div class="white" id="KeyP">
                 <div class="white-letter">P</div>
             </div>
-            <div class="black">
+            <div class="black" id="Minus">
                 <div class="black-letter">-</div>
             </div>
         </div>
         <div class="key">
-            <div class="white">
+            <div class="white" id="BracketLeft">
                 <div class="white-letter">[</div>
             </div>
-            <div class="black">
+            <div class="black" id="Equal">
                 <div class="black-letter">=</div>
             </div>
         </div>
         <div class="key">
-            <div class="white">
+            <div class="white" id="BracketRight">
                 <div class="white-letter">]</div>
             </div>
-            <div class="black">
+            <div class="black" id="Backspace">
                 <div class="black-letter">⟵</div>
             </div>
         </div>
         <div class="key">
-            <div class="white">
+            <div class="white" id="Backslash">
                 <div class="white-letter">\</div>
             </div>
         </div>
     </div>
 </header>
 
-<main>
+<main class="main-white">
     <div class="main-title">
         <h1>Virtual Piano 🎹</h1>
     </div>
 
     <div class="switches">
         <div class="switches-key-visibility">
-            <p class="main-toggle-text">Keys visibility</p>
+            <p class="switches-text">Keys visibility</p>
             <label>
-                <input class="toggle" type="checkbox" name="key-visibility" value="turned" checked>
+                <input class="toggle" type="checkbox" name="key-visibility" checked>
             </label>
         </div>
 
         <div class="switches-light">
-            <p class="main-toggle-text">Light</p>
+            <p class="switches-text">Light</p>
             <label>
-                <input class="toggle" type="checkbox" name="light" value="turned" checked>
+                <input class="toggle" type="checkbox" name="light" checked>
             </label>
         </div>
-
-
     </div>
 
     <div class="main-content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum et maiores neque porro sunt. A ad dolorum
-            explicabo id iste nobis rem, reprehenderit ullam. Distinctio harum labore laboriosam veniam vitae.</p>
+        <p>Play the piano using a keyboard, a mouse or a touch device. To switch keys description or dark mode use
+            toggles above. Enjoy!</p>
     </div>
 
     <div class="main-content tec">
@@ -161,7 +159,8 @@
     </p>
 </footer>
 
-<script src="js/piano.js"></script>
-<script src="js/letter-hide.js"></script>
+<script src="Virtual%20Piano/task/src/js/piano.js"></script>
+<script src="Virtual%20Piano/task/src/js/letter-hide.js"></script>
+<script src="Virtual%20Piano/task/src/js/light.js"></script>
 </body>
 </html>
