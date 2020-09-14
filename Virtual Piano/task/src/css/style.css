@@ -94,13 +94,8 @@ body {
     display: none;
 }
 
-.main-white {
+.main {
     background: white;
-}
-
-.main-dark {
-    background: #424242;
-    color: #eeeeee;
 }
 
 .main-title {
@@ -111,7 +106,8 @@ body {
     color: #222222;
 }
 
-.main-title-white {
+.dark-mode {
+    background: #424242;
     color: #eeeeee;
 }
 

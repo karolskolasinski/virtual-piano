@@ -1,8 +1,8 @@
-const keyVisibility = document.querySelector("input[name=key-visibility]");
-const letters = document.querySelectorAll('.char');
+const keysVisibilityCheckbox = document.querySelector("input[name=key-visibility]");
+const chars = document.querySelectorAll('.char');
 
-keyVisibility.addEventListener('click', () => {
-    keyVisibility.checked ?
-        letters.forEach(value => value.classList.remove('char-hide')) :
-        letters.forEach(value => value.classList.add('char-hide'));
+keysVisibilityCheckbox.addEventListener('change', () => {
+    keysVisibilityCheckbox.checked ?
+        chars.forEach(char => char.classList.remove('char-hide')) :
+        chars.forEach(char => char.classList.add('char-hide'));
 });
