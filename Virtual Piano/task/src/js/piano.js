@@ -1,9 +1,3 @@
-document.onkeydown = t => {
-    if (t.code === 'Tab') {
-        return false;
-    }
-};
-
 const keys = {
     // normal keys
     'Tab': 'audio/C1.mp3',
@@ -32,6 +26,13 @@ const keys = {
     'Minus': 'audio/F2-sharp.mp3',
     'Equal': 'audio/G2-sharp.mp3',
     'Backspace': 'audio/A2-sharp.mp3',
+};
+
+
+document.onkeydown = t => {
+    if (t.code === 'Tab') {
+        return false;
+    }
 };
 
 
