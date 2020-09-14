@@ -502,25 +502,10 @@ files:
         }
     })
   learner_created: true
-- name: src/audio/W.mp3
-  visible: true
-  learner_created: true
-- name: src/audio/T.mp3
-  visible: true
-  learner_created: true
-- name: src/audio/Y.mp3
-  visible: true
-  learner_created: true
-- name: src/audio/U.mp3
-  visible: true
-  learner_created: true
-- name: src/audio/E.mp3
-  visible: true
-  learner_created: true
-- name: src/js/letter-hide.js
-  visible: true
-  learner_created: true
 - name: src/css/toggle.css
+  visible: true
+  learner_created: true
+- name: src/js/char-hide.js
   visible: true
   learner_created: true
 feedback_link: https://hyperskill.org/projects/101/stages/560/implement
