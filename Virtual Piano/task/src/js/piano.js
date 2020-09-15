@@ -43,8 +43,22 @@ document.addEventListener('keydown', e => {
     }
 });
 
+document.addEventListener('keydown', e => {
+    if (e.code in keys) {
+        new Audio(keys[e.code]).play();
+        document.querySelector(`#${e.code}`).classList.add('active');
+    }
+});
+
 
 document.addEventListener('keyup', e => {
+    if (e.code in keys) {
+        document.querySelector(`#${e.code}`).classList.remove('active');
+    }
+});
+
+
+document.addEventListener('touchend', e => {
     if (e.code in keys) {
         document.querySelector(`#${e.code}`).classList.remove('active');
     }

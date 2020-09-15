@@ -512,9 +512,11 @@ files:
   visible: true
   learner_created: true
 feedback_link: https://hyperskill.org/projects/101/stages/560/implement
-status: Solved
+status: Failed
 feedback:
-  message: Congratulations! Continue on <a href="https://hyperskill.org/projects/101/stages/560/implement">JetBrains
-    Academy</a>
-  time: Thu, 03 Sep 2020 15:22:45 UTC
+  message: |-
+    Wrong answer in test #1
+
+    There are not enough audio objects, 5 of 12 objects were found
+  time: Tue, 15 Sep 2020 14:02:50 UTC
 record: -1
