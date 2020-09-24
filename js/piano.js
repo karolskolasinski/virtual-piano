@@ -61,16 +61,16 @@ for (let key in keys) {
 
 
 document.addEventListener('touchstart', e => {
-    if (e.code in keys) {
-        keys[e.code].currentTime = 0;
-        keys[e.code].play();
-        document.querySelector(`#${e.code}`).classList.add('active');
+    if (e.target.id in keys) {
+        keys[e.target.id].currentTime = 0;
+        keys[e.target.id].play();
+        document.querySelector(`#${e.target.id}`).classList.add('active');
     }
 });
 
 
-// document.addEventListener('touchend', e => {
-//     if (e.code in keys) {
-//         document.querySelector(`#${e.code}`).classList.remove('active');
-//     }
-// });
+document.addEventListener('touchend', e => {
+    if (e.code in keys) {
+        document.querySelector(`#${e.code}`).classList.remove('active');
+    }
+});
