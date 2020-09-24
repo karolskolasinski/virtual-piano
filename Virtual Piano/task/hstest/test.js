@@ -62,7 +62,7 @@ async function stageTest() {
 
         // Test #2 - check div element with class 'container' + 2 elements inside
         () => {
-            let containerElements = document.getElementsByClassName('white-keys');
+            let containerElements = document.getElementsByClassName('container');
             if (containerElements.length === 0) {
                 return hs.wrong(`Cannot find element with class 'container'`);
             } else if (containerElements.length > 1) {

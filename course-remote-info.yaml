@@ -95,15 +95,17 @@ topics:
     theory_id: 8580
   - title: Conditional operators
     theory_id: 8889
-  - title: Connecting JS to HTML
-    theory_id: 7510
   - title: DOM
     theory_id: 8635
+  - title: DOM events
+    theory_id: 10857
+  - title: Connecting JS to HTML
+    theory_id: 7510
   - title: CSS Selectors
     theory_id: 7738
   - title: DOM methods
     theory_id: 8662
-  - title: DOM events and "addEventListener" method
+  - title: The "addEventListener" method
     theory_id: 8723
   - title: Keyboard events handling
     theory_id: 8898

@@ -1,5 +1,3 @@
-
-
 document.onkeydown = t => {
     if (t.code === 'Tab') {
         return false;
@@ -60,3 +58,19 @@ for (let key in keys) {
 
     });
 }
+
+
+document.addEventListener('touchstart', e => {
+    if (e.code in keys) {
+        keys[e.code].currentTime = 0;
+        keys[e.code].play();
+        document.querySelector(`#${e.code}`).classList.add('active');
+    }
+});
+
+
+// document.addEventListener('touchend', e => {
+//     if (e.code in keys) {
+//         document.querySelector(`#${e.code}`).classList.remove('active');
+//     }
+// });
