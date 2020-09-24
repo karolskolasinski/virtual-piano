@@ -55,22 +55,5 @@ for (let key in keys) {
     document.querySelector(`#${key}`).addEventListener("click", () => {
         keys[key].currentTime = 0;
         keys[key].play();
-
     });
 }
-
-
-document.addEventListener('touchstart', e => {
-    if (e.target.id in keys) {
-        keys[e.target.id].currentTime = 0;
-        keys[e.target.id].play();
-        document.querySelector(`#${e.target.id}`).classList.add('active');
-    }
-});
-
-
-document.addEventListener('touchend', e => {
-    if (e.code in keys) {
-        document.querySelector(`#${e.code}`).classList.remove('active');
-    }
-});
