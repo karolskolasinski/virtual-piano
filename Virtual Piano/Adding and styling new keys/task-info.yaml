@@ -511,6 +511,9 @@ files:
 - name: src/js/dark-mode.js
   visible: true
   learner_created: true
+- name: src/virtual-piano.ico
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/101/stages/560/implement
 status: Failed
 feedback:
