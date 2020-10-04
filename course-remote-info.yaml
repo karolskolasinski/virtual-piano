@@ -38,6 +38,12 @@ topics:
   - title: WebStorm
     theory_id: 9492
   1:
+  - title: Binary numbers
+    theory_id: 5544
+  - title: Hexadecimal numbers
+    theory_id: 8788
+  - title: RGB
+    theory_id: 8819
   - title: Block-level elements
     theory_id: 7271
   - title: Inline Elements
@@ -54,8 +60,6 @@ topics:
     theory_id: 7722
   - title: Comments
     theory_id: 7730
-  - title: Colors
-    theory_id: 7973
   - title: Border
     theory_id: 8355
   - title: Absolute units
@@ -66,6 +70,8 @@ topics:
     theory_id: 8325
   - title: Margin and padding
     theory_id: 8346
+  - title: Colors
+    theory_id: 7973
   2:
   - title: Introduction to JavaScript
     theory_id: 8016
